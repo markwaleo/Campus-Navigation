@@ -227,12 +227,10 @@ class CampusMap:
             ("线路", "lines"),
             ("线路距离", "distances"),
             ("节点", "nodes"),
-            ("节点名", "node_names"),
-            ("刷新地图", self.refresh_map)
+            ("节点名", "node_names")
         ]
         for text, layer in buttons[:-1]:
             tk.Button(toggle_frame, text=text, command=lambda l=layer: self.toggle_layer(self.view_map_window.winfo_children()[0], l)).pack(side=tk.LEFT, padx=5)
-        tk.Button(toggle_frame, text="刷新地图", command=self.refresh_map).pack(side=tk.LEFT, padx=5)
 
     # 切换图层
     def toggle_layer(self, canvas, layer):
